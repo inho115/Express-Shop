@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const PDFDocument = require("pdfkit");
-const stripe = require("stripe")(process.env.STRIPE_KEY);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const Product = require("../models/product");
 const Order = require("../models/order");
@@ -153,14 +153,16 @@ exports.getCheckout = async (req, res, next) => {
       customer_email: req.user.email,
       success_url: req.protocol + "://" + req.get("host") + "/checkout/success",
       cancel_url: req.protocol + "://" + req.get("host") + "/checkout/cancel",
+      // automatic_tax: { enabled: true },
     });
-    res.render("shop/checkout", {
-      path: "/checkout",
-      pageTitle: "Checkout",
-      products: products,
-      totalSum: total,
-      sessionId: session.id,
-    });
+    res.redirect(303, session.url);
+    // res.render("shop/checkout", {
+    //   path: "/checkout",
+    //   pageTitle: "Checkout",
+    //   products: products,
+    //   totalSum: total,
+    //   sessionId: session.id,
+    // });
   } catch (err) {
     const error = new Error(err);
     error.httpStatusCode = 500;
@@ -170,7 +172,9 @@ exports.getCheckout = async (req, res, next) => {
 
 exports.getCheckoutSuccess = async (req, res, next) => {
   try {
-    const user = req.user.populate("cart.items.productId");
+    // problem here
+    const user = await req.user.populate("cart.items.productId");
+    console.log(user);
     const products = user.cart.items.map((i) => {
       return { quantity: i.quantity, product: { ...i.productId._doc } };
     });
@@ -193,7 +197,13 @@ exports.getCheckoutSuccess = async (req, res, next) => {
 
 exports.postOrder = async (req, res, next) => {
   try {
+    const token = req.body.stripeToken; // Using Express
+    let totalSum = 0;
+
     const user = await req.user.populate("cart.items.productId");
+    user.cart.items.forEach((p) => {
+      totalSum += p.quantity * p.productId.price;
+    });
     const products = user.cart.items.map((i) => {
       return { quantity: i.quantity, product: { ...i.productId._doc } };
     });
@@ -205,6 +215,13 @@ exports.postOrder = async (req, res, next) => {
       products: products,
     });
     await order.save();
+    const charge = stripe.charges.create({
+      amount: totalSum * 100,
+      currency: "usd",
+      description: "Demo Order",
+      source: token,
+      metadata: { order_id: result._id.toString() },
+    });
     await req.user.clearCart();
     res.redirect("/orders");
   } catch (err) {

@@ -17,7 +17,9 @@ const cloudinary = require("cloudinary").v2;
 require("dotenv").config();
 
 const errorController = require("./controllers/error");
+const shopController = require("./controllers/shop");
 const User = require("./models/user");
+const isAuth = require("./middleware/is-auth");
 
 const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.3xmotxz.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
 
@@ -76,6 +78,10 @@ app.use(
     useDefaults: true,
     directives: {
       "img-src": ["self", "https: data:"],
+      connectSrc: ["'self'", "https://js.stripe.com"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https://js.stripe.com"],
+      frameSrc: ["'self'", "https://js.stripe.com"],
+      scriptSrcAttr: ["'unsafe-inline'"],
     },
   })
 );
@@ -122,6 +128,7 @@ app.use((req, res, next) => {
     });
 });
 
+app.post("/create-order", isAuth, shopController.postOrder);
 app.use("/admin", adminRoutes);
 app.use(shopRoutes);
 app.use(authRoutes);
