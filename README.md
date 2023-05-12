@@ -79,7 +79,12 @@ It is a mixture of provided content and my own work.
 - If user is not authenticated (not logged in or does not exist), the authentication middleware will check the status of session and either redirect to correct url or to login page.
 ![login](https://github.com/inho115/Express-Shop/assets/97544886/5589a1c3-aec9-4b0c-843f-2ee83aa8807f)
 
+- Once user complete sign up process, the user will receive email from test@inhohan.ca with welcoming message.
+- Seng Grid API was implemented for this purpose but also for resetting password.
+![signup email](https://github.com/inho115/Express-Shop/assets/97544886/19a8fe60-886c-45c8-b7d9-85b2afbdd993)
 
+- If user click reset password link, a single line form will be rendered. 
+- When form is submitted, the user will receive email with a link to reset password. 
 ## License 
 - Copyright (c) 2023 In ho Han
 ## Thanks to
