@@ -2,7 +2,7 @@
 Link to website <a href="https://express-shop.up.railway.app/">Express Shop</a><br/>
 By In ho Han <br/>
 Responsive Demo E-commerce website.<br/>
-This website is created under instruction made by <a href="[https://www.udemy.com/user/jonasschmedtmann/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Webindex_Catchall_la.EN_cc.CA&utm_term=_._ag_119831896715_._ad_533102824920_._kw__._de_c_._dm__._pl__._ti_dsa-423967289464_._li_9000910_._pd__._&matchtype=&gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPKPVDeN_Q4-z80u10OX9Ig540Dbr_XlxbYkkADXGTnZgvQOjOA1LssaAuaHEALw_wcB](https://www.udemy.com/user/academind/)">Academind by Maximillian</a> on Udemy course.
+This website is created under instruction made by <a href="https://www.udemy.com/user/academind/">Academind by Maximillian</a> on Udemy course.
 It is a mixture of provided content and my own work.
 
 ## Technologies Used
@@ -149,7 +149,7 @@ It is a mixture of provided content and my own work.
 ## License 
 - Copyright (c) 2023 In ho Han
 ## Thanks to
-- <a href="[https://www.udemy.com/user/jonasschmedtmann/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Webindex_Catchall_la.EN_cc.CA&utm_term=_._ag_119831896715_._ad_533102824920_._kw__._de_c_._dm__._pl__._ti_dsa-423967289464_._li_9000910_._pd__._&matchtype=&gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPKPVDeN_Q4-z80u10OX9Ig540Dbr_XlxbYkkADXGTnZgvQOjOA1LssaAuaHEALw_wcB](https://www.udemy.com/user/academind/)">Academind by Maximillian</a>
+- <a href="https://www.udemy.com/user/academind/">Academind by Maximillian</a>
   - Youtube Channel owner and instructor at Udemy.
 ## Contact
 - If you have any question related to this project, please contact me with any of these method.
