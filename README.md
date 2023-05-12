@@ -1,4 +1,4 @@
-# Weather Assistant
+# Express Shop
 Link to website <a href="https://express-shop.up.railway.app/">Express Shop</a><br/>
 By In ho Han <br/>
 Responsive Demo E-commerce website.<br/>
@@ -85,6 +85,11 @@ It is a mixture of provided content and my own work.
 
 - If user click reset password link, a single line form will be rendered. 
 - When form is submitted, the user will receive email with a link to reset password. 
+- This process is completed by using Send Grid API with creation of token for resetting password.
+![Reset password link](https://github.com/inho115/Express-Shop/assets/97544886/734f55a2-448b-44a2-8ff3-fac6c1a09f2f)
+
+- The link will have the parameter of token and will reach to new password assign page where it retrieve that token for validation/authentication process.
+
 ## License 
 - Copyright (c) 2023 In ho Han
 ## Thanks to
