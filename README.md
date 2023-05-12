@@ -93,13 +93,13 @@ It is a mixture of provided content and my own work.
 
 - This link will lead a user to reach a route where it utilize the parameter for validation/authentication process.
 - If a verification with a reset token is complete, the user can enter new password and server will redirect user to a login page.
-- ![Uploading new password input.PNG…]()
+![Uploading new password input.PNG…]()
 
 - To add product, the user will be asked to input title, image file, price, and description of the product.
 - For an image, the image will be stored in server's images folder and deleted after image is uploaded to cloudinary server.
 - Once upload is complete, the server will fetch url of image and store the url instead of path of the image.
 - This process was implemented to reduce the number of static file in server for optimization purpose.
-- ![add product page](https://github.com/inho115/Express-Shop/assets/97544886/2ae10712-2929-415c-bef1-cc1416bca313)
+![add product page](https://github.com/inho115/Express-Shop/assets/97544886/2ae10712-2929-415c-bef1-cc1416bca313)
 
 - On Admin page, the user can either update or delete product.
 - Editing is simple, unless user is updating the image file.
