@@ -189,11 +189,11 @@ exports.postReset = async (req, res, next) => {
         subject: "Password reset",
         text: `
             <p>You requested a password reset.</p>
-            <p>Click this <a href="http://${process.env.PORT}/reset/${token}">link</a> to set a new password.</p>
+            <p>Click this <a href="http://express-shop.up.railway.app/reset/${token}">link</a> to set a new password.</p>
           `,
         html: `
             <p>You requested a password reset.</p>
-            <p>Click this <a href="http://${process.env.PORT}/reset/${token}">link</a> to set a new password.</p>
+            <p>Click this <a href="http://express-shop.up.railway.app/reset/${token}">link</a> to set a new password.</p>
           `,
       };
       return sgMail.send(msg);
