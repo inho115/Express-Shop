@@ -53,8 +53,15 @@ It is a mixture of provided content and my own work.
 - stripe (ver 12.4.0)
 
 ## Purpose
-- This project demonstrates practice online business website. User can add product to a market, add product on a cart, place an order, download an invoice, make a payment, and delete a registered product from website.
-- ![LoggedIn](https://github.com/inho115/Express-Shop/assets/97544886/0336f54c-509e-4bd1-a4c3-ab206749962a)
+- This project demonstrates practice online business website. 
+- User can 
+  - Add product to a market
+  - Add product on a cart
+  - Place an order
+  - Download an invoice
+  - Make a payment
+  - Delete a registered product from website.
+![LoggedIn](https://github.com/inho115/Express-Shop/assets/97544886/0336f54c-509e-4bd1-a4c3-ab206749962a)
 
 - Purpose of this project is to demonstrate my understanding of crucial conecept in web developement and they are:
   - Server-side logic
@@ -67,10 +74,10 @@ It is a mixture of provided content and my own work.
 
 ## Description 
 - These behaviours are only allowed to signed up and logged in user. When visitor is not logged in, the guest only can view available products.
-- ![LoggedIn](https://github.com/inho115/Express-Shop/assets/97544886/712a6448-d7d4-4791-a4ca-306eb0baa644)
+![LoggedIn](https://github.com/inho115/Express-Shop/assets/97544886/712a6448-d7d4-4791-a4ca-306eb0baa644)
 
 - If user is not authenticated (not logged in or does not exist), the authentication middleware will check the status of session and either redirect to correct url or to login page.
-- ![login](https://github.com/inho115/Express-Shop/assets/97544886/5589a1c3-aec9-4b0c-843f-2ee83aa8807f)
+![login](https://github.com/inho115/Express-Shop/assets/97544886/5589a1c3-aec9-4b0c-843f-2ee83aa8807f)
 
 
 ## License 
