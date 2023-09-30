@@ -1,5 +1,5 @@
 # Express Shop
-Link to website <a href=["https://express-shop.up.railway.app/"](https://express-shop-production.up.railway.app/)>Express Shop</a><br/>
+Link to website <a href="https://express-shop.up.railway.app/">Express Shop</a><br/>
 By In ho Han <br/>
 Responsive Demo E-commerce website.<br/>
 This website is created under instruction made by <a href="https://www.udemy.com/user/academind/">Academind by Maximillian</a> on Udemy course.
